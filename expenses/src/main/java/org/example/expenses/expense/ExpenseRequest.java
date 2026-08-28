@@ -1,10 +1,13 @@
 package org.example.expenses.expense;
 
+import jakarta.validation.constraints.*;
+
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
 public class ExpenseRequest {
-    BigDecimal amount;
+   @NotNull @Positive
+   BigDecimal amount;
 
     public BigDecimal getAmount() {
         return amount;
@@ -14,7 +17,7 @@ public class ExpenseRequest {
         this.amount = amount;
     }
 
-    String currency;
+    @NotBlank @Size(min = 3, max = 3) String currency;
 
 
     public String getCurrency() {
@@ -25,7 +28,7 @@ public class ExpenseRequest {
         this.currency = currency;
     }
 
-    String category;
+    @NotBlank @Size(min=1,max=100) String category;
 
     public String getCategory() {
         return category;
@@ -45,7 +48,8 @@ public class ExpenseRequest {
         this.description = description;
     }
 
-    LocalDate spentOn;
+   @NotNull @PastOrPresent
+   LocalDate spentOn;
     public LocalDate getSpentOn() {
         return spentOn;
     }

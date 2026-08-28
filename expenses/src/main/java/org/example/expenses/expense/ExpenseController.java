@@ -19,7 +19,7 @@ public class ExpenseController {
     }
 
     @PostMapping
-    public Expense createExpense(@RequestBody ExpenseRequest expenseRequest) {
+    public Expense createExpense(@Valid @RequestBody ExpenseRequest expenseRequest) {
         Expense expense =new Expense();
         expense.setAmount(expenseRequest.getAmount());
         expense.setCurrency(expenseRequest.getCurrency());
