@@ -1,6 +1,10 @@
 package org.example.expenses.expense;
 
+import jakarta.validation.Valid;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.HttpStatusCodeException;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
@@ -28,5 +32,10 @@ public class ExpenseController {
     @GetMapping
     public List<Expense> getAllExpenses() {
         return expenseRepository.findAll();
+    }
+
+    @GetMapping("/{id}")
+    public Expense getExpenseById(@PathVariable Long id) {
+        return expenseRepository.findById(id).orElseThrow(()-> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
 }
