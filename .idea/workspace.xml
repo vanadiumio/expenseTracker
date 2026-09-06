@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93caa2b1-0856-443b-9518-6534e0eaf9fc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/models/expense.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/schemas/expense.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routers/expense.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alembic/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/alembic/env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/database.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -292,7 +291,7 @@
       <updated>1788671471006</updated>
       <workItem from="1788671472058" duration="30000" />
       <workItem from="1788671504497" duration="43000" />
-      <workItem from="1788671848885" duration="10397000" />
+      <workItem from="1788671848885" duration="13076000" />
     </task>
     <servers />
   </component>
